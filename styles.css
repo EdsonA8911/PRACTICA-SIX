@@ -1,0 +1,80 @@
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+  --radius: 12px;
+  --maxw: 900px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  background:linear-gradient(180deg,var(--bg),#eef3f9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  color:#0f172a;
+}
+
+.card{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px;
+}
+
+.profile{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  border-bottom:1px solid #eef2f6;
+  padding-bottom:18px;
+}
+
+.avatar{
+  width:92px;
+  height:92px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#4c9bd6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  font-size:28px;
+  box-shadow:0 4px 10px rgba(43,108,176,0.18);
+}
+
+.personal h1{margin:0;font-size:24px}
+.role{margin:6px 0;color:var(--muted);font-weight:600}
+.summary{margin:6px 0 0;color:#334155}
+
+.section{padding:18px 0;border-bottom:1px solid #f1f5f9}
+.section h2{margin:0 0 12px;font-size:18px;color:var(--accent)}
+.item h3, .project h3{margin:0 0 6px}
+.meta{color:var(--muted);font-size:13px;margin:6px 0}
+
+.skills{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.skills li{display:block}
+.skill-name{display:block;font-weight:600;margin-bottom:6px}
+.bar{width:100%;height:10px;background:#eef3f8;border-radius:999px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,var(--accent),#6fb3e6);border-radius:999px}
+
+.project p{margin:8px 0;color:#0f172a}
+.footer{padding-top:12px}
+.footer a{color:var(--accent);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+
+@media (max-width:640px){
+  .profile{flex-direction:row;gap:12px}
+  .avatar{width:72px;height:72px;font-size:22px}
+  .card{padding:18px}
+}
